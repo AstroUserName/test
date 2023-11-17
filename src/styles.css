@@ -31,10 +31,6 @@
   margin-right: 5px;
 }
 
-.active {
-  background-color: black;
-}
-
 .page-link {
   padding: 5px 10px;
   border: 1px solid #ddd;
@@ -67,7 +63,7 @@
   margin-bottom: 20px;
 }
 
-.sidebar.active {
+.sidebar.show {
   transform: translateX(0);
 }
 
@@ -76,5 +72,13 @@
   align-items: center;
   justify-content: space-around;
   margin-bottom: 20px;
+}
+
+.navigation-item {
+  color: inherit;
   text-decoration: none;
+}
+
+.active {
+  color: red;
 }
