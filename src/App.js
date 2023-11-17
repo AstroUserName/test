@@ -1,25 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import CategoryPage from "./components/CategoryPage";
+import SideBar from "./components/SideBar";
+import store from "./redux/store";
+import { Provider } from "react-redux";
+import productsData from "./data.json";
+import Navigation from "./components/Navigation";
 
-function App() {
+const navigation = [
+  { navigationPath: "/category/electronics", name: "electronics" },
+  { navigationPath: "/category/candies", name: "candies" },
+  { navigationPath: "/category/clothing", name: "clothing" },
+];
+
+const App = () => {
+  const [showSidebar, setShowSidebar] = useState(false);
+
+  const toggleSidebar = () => {
+    setShowSidebar(!showSidebar);
+  };
+
+  useEffect(() => {
+    store.dispatch({ type: "SET_PRODUCTS", payload: productsData });
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <button onClick={toggleSidebar}>
+        {showSidebar ? "Скрыть" : "Показать"} удаленные элементы
+      </button>
+      <SideBar show={showSidebar} />
+      <Router>
+        {navigation.map(({ navigationPath, name }) => (
+          <Navigation key={name} navigationPath={navigationPath} name={name} />
+        ))}
+        <Routes>
+          <Route path="/category/:categoryName" element={<CategoryPage />} />
+        </Routes>
+      </Router>
+    </Provider>
   );
-}
+};
 
 export default App;

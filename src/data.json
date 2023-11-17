@@ -1,0 +1,38 @@
+{
+  "candies": [
+    {"id": 1, "name": "Марс", "category": "candies"},
+    {"id": 2, "name": "Сникерс", "category": "candies"},
+    {"id": 3, "name": "Баунти", "category": "candies"},
+    {"id": 4, "name": "Твикс", "category": "candies"},
+    {"id": 5, "name": "Милки Вэй", "category": "candies"},
+    {"id": 6, "name": "Нутелла", "category": "candies"},
+    {"id": 7, "name": "КитКат", "category": "candies"},
+    {"id": 8, "name": "М&М's", "category": "candies"},
+    {"id": 9, "name": "Чупа Чупс", "category": "candies"},
+    {"id": 10, "name": "Аленка", "category": "candies"}
+  ],
+  "electronics": [
+    {"id": 11, "name": "Смартфон", "category": "electronics"},
+    {"id": 12, "name": "Телевизор", "category": "electronics"},
+    {"id": 13, "name": "Наушники", "category": "electronics"},
+    {"id": 14, "name": "Фотоаппарат", "category": "electronics"},
+    {"id": 15, "name": "Ноутбук", "category": "electronics"},
+    {"id": 16, "name": "Планшет", "category": "electronics"},
+    {"id": 17, "name": "Электронная книга", "category": "electronics"},
+    {"id": 18, "name": "Игровая консоль", "category": "electronics"},
+    {"id": 19, "name": "Умные часы", "category": "electronics"},
+    {"id": 20, "name": "Внешний жесткий диск", "category": "electronics"}
+  ],
+  "clothing": [
+    {"id": 21, "name": "Джинсы", "category": "clothing"},
+    {"id": 22, "name": "Куртка", "category": "clothing"},
+    {"id": 23, "name": "Футболка", "category": "clothing"},
+    {"id": 24, "name": "Платье", "category": "clothing"},
+    {"id": 25, "name": "Шорты", "category": "clothing"},
+    {"id": 26, "name": "Свитер", "category": "clothing"},
+    {"id": 27, "name": "Блуза", "category": "clothing"},
+    {"id": 28, "name": "Толстовка", "category": "clothing"},
+    {"id": 29, "name": "Костюм", "category": "clothing"},
+    {"id": 30, "name": "Пальто", "category": "clothing"}
+  ]
+}
